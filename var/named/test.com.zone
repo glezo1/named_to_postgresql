@@ -1,0 +1,17 @@
+$TTL 86400
+@ IN SOA ns1.test.com. root.test.com. (
+        2013042201 ;Serial
+        3600 ;Refresh
+        1800 ;Retry
+        604800 ;Expire
+        86400 ;Minimum TTL
+)
+; Specify our two nameservers
+                IN NS ns1.test.com.
+                IN NS ns2.test.com.
+; Resolve nameserver hostnames to IP, replace with your two droplet IP addresses.
+ns1 IN A your.truly.public.ip
+ns2 IN A your.truly.public.ip
+; Define hostname -> IP pairs which you wish to resolve
+@   IN A your.truly.public.ip
+www IN A your.truly.public.ip
